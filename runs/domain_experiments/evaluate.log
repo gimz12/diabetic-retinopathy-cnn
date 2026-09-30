@@ -1,0 +1,22 @@
+shipped (APTOS only)         APTOS test  kappa 0.868  acc 0.767  sens 0.961  spec 0.970
+shipped (APTOS only)         DDR test    kappa 0.592  acc 0.602  sens 0.485  spec 0.983
+A: fine-tuned on 1,000 DDR   APTOS test  kappa 0.769  acc 0.684  sens 0.986  spec 0.849
+A: fine-tuned on 1,000 DDR   DDR test    kappa 0.756  acc 0.748  sens 0.824  spec 0.866
+B: trained on APTOS + DDR    APTOS test  kappa 0.872  acc 0.740  sens 0.989  spec 0.952
+B: trained on APTOS + DDR    DDR test    kappa 0.864  acc 0.800  sens 0.896  spec 0.877
+
+=== summary ===
+test set                    APTOS test  DDR test
+model                                           
+A: fine-tuned on 1,000 DDR       0.769     0.756
+B: trained on APTOS + DDR        0.872     0.864
+shipped (APTOS only)             0.868     0.592
+
+=== per-grade recall ===
+                   shipped (APTOS only)          A: fine-tuned on 1,000 DDR          B: trained on APTOS + DDR         
+                             APTOS test DDR test                 APTOS test DDR test                APTOS test DDR test
+0 No DR                           0.970    0.983                      0.849    0.866                     0.952    0.877
+1 Mild                            0.554    0.010                      0.000    0.032                     0.696    0.390
+2 Moderate                        0.533    0.155                      0.807    0.689                     0.493    0.763
+3 Severe                          0.483    0.486                      0.345    0.400                     0.345    0.429
+4 Proliferative DR                0.773    0.620                      0.341    0.810                     0.591    0.832

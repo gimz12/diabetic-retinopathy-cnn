@@ -1,0 +1,4 @@
+,APTOS test (same hospital network),"DDR, all 12,522 (147 Chinese hospitals)"
+accuracy,0.7673,0.6031
+macro_f1,0.6256,0.3938
+quadratic_kappa,0.868,0.5867

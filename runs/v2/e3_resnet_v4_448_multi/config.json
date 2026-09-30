@@ -1,0 +1,34 @@
+{
+  "arch": "resnet50",
+  "img_size": 448,
+  "batch_size": 16,
+  "num_workers": 4,
+  "dropout": 0.3,
+  "label_smoothing": 0.1,
+  "balance": "domain_class",
+  "regression": false,
+  "seed": 42,
+  "phase1_epochs": 4,
+  "phase1_lr": 0.001,
+  "phase2_epochs": 15,
+  "phase2_lr_backbone": 0.0001,
+  "phase2_lr_head": 0.001,
+  "unfreeze_stages": 3,
+  "weight_decay": 0.0001,
+  "grad_clip": 1.0,
+  "patience": 4,
+  "pipeline": "v4",
+  "aug": "v2",
+  "note": "ResNet50, v4 (v3 + Ben Graham + CLAHE), APTOS + DDR, domain x class balanced",
+  "device": "mps",
+  "phase1_params": {
+    "trainable": 10245,
+    "frozen": 23508032,
+    "total": 23518277
+  },
+  "phase2_params": {
+    "trainable": 23242757,
+    "frozen": 275520,
+    "total": 23518277
+  }
+}

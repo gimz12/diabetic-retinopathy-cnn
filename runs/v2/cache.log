@@ -1,0 +1,7 @@
+aptos: {'done': 3355, 'skipped': 0, 'failed': 0}
+Corrupt JPEG data: 35 extraneous bytes before marker 0xd9
+Corrupt JPEG data: 38 extraneous bytes before marker 0xd9
+Corrupt JPEG data: 34 extraneous bytes before marker 0xd9
+ddr: {'done': 12362, 'skipped': 0, 'failed': 0}
+idrid: {'done': 446, 'skipped': 0, 'failed': 0}
+messidor: {'done': 1729, 'skipped': 0, 'failed': 0}

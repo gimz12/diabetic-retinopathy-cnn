@@ -1,0 +1,10 @@
+{
+  "run": "s3_resnet_v3_448_multi",
+  "arch": "resnet50",
+  "pipeline": "v3",
+  "img_size": 448,
+  "tta": true,
+  "note": "ResNet50, v3, APTOS + DDR, domain x class balanced",
+  "generated": "2026-09-25T06:52",
+  "quick": false
+}

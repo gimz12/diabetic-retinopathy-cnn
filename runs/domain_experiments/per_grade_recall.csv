@@ -1,0 +1,7 @@
+,shipped (APTOS only),shipped (APTOS only),"A: fine-tuned on 1,000 DDR","A: fine-tuned on 1,000 DDR",B: trained on APTOS + DDR,B: trained on APTOS + DDR
+,APTOS test,DDR test,APTOS test,DDR test,APTOS test,DDR test
+0 No DR,0.981,0.983,0.857,0.867,0.962,0.876
+1 Mild,0.529,0.01,0.0,0.032,0.686,0.39
+2 Moderate,0.508,0.155,0.796,0.689,0.47,0.763
+3 Severe,0.482,0.486,0.333,0.4,0.333,0.429
+4 Proliferative DR,0.763,0.62,0.368,0.81,0.579,0.832

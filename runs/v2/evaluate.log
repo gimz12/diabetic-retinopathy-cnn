@@ -1,0 +1,30 @@
+r0_oldchain_256    aptos     seen    kappa 0.881  sens 0.976  spec 0.988
+r0_oldchain_256    ddr       UNSEEN  kappa 0.528  sens 0.421  spec 0.978
+r0_oldchain_256    idrid     UNSEEN  kappa 0.784  sens 0.956  spec 0.812
+r0_oldchain_256    messidor  UNSEEN  kappa 0.495  sens 0.297  spec 0.962
+r1_v2_256          aptos     seen    kappa 0.901  sens 0.996  spec 0.972
+r1_v2_256          ddr       UNSEEN  kappa 0.573  sens 0.493  spec 0.980
+r1_v2_256          idrid     UNSEEN  kappa 0.722  sens 0.969  spec 0.828
+r1_v2_256          messidor  UNSEEN  kappa 0.499  sens 0.311  spec 0.975
+r1b_v2prep_v1aug_256 aptos     seen    kappa 0.883  sens 1.000  spec 0.972
+r1b_v2prep_v1aug_256 ddr       UNSEEN  kappa 0.573  sens 0.532  spec 0.953
+r1b_v2prep_v1aug_256 idrid     UNSEEN  kappa 0.676  sens 0.987  spec 0.414
+r1b_v2prep_v1aug_256 messidor  UNSEEN  kappa 0.536  sens 0.635  spec 0.786
+r2_v2_448          aptos     seen    kappa 0.884  sens 1.000  spec 0.972
+r2_v2_448          ddr       UNSEEN  kappa 0.625  sens 0.544  spec 0.985
+r2_v2_448          idrid     UNSEEN  kappa 0.751  sens 0.972  spec 0.797
+r2_v2_448          messidor  UNSEEN  kappa 0.584  sens 0.483  spec 0.958
+r3_v2_448_multi    aptos     seen    kappa 0.899  sens 1.000  spec 0.940
+r3_v2_448_multi    ddr       seen    kappa 0.880  sens 0.911  spec 0.914
+r3_v2_448_multi    idrid     UNSEEN  kappa 0.745  sens 0.997  spec 0.414
+r3_v2_448_multi    messidor  UNSEEN  kappa 0.634  sens 0.796  spec 0.745
+
+=== kappa by run and hospital ===
+test set               aptos     ddr   idrid  messidor
+run                                                   
+r0_oldchain_256       0.8806  0.5282  0.7845    0.4949
+r1_v2_256             0.9014  0.5727  0.7218    0.4993
+r1b_v2prep_v1aug_256  0.8829  0.5733  0.6759    0.5358
+r2_v2_448             0.8840  0.6246  0.7512    0.5840
+r3_v2_448_multi       0.8988  0.8795  0.7449    0.6341
+CHAIN2_DONE

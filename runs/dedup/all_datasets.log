@@ -1,0 +1,12 @@
+18383 photos across ['aptos', 'ddr', 'idrid', 'messidor']
+exact duplicate groups: 227  pairs: 245
+phash distance  | exact dups: max 0  | random pairs: min 6, 1st pct 14, median 26
+Corrupt JPEG data: 38 extraneous bytes before marker 0xd9
+Corrupt JPEG data: 34 extraneous bytes before marker 0xd9
+embedding cosine| exact dups: min 1.000 | random pairs: max 0.994, 99th pct 0.980, median 0.746
+candidates from hash/embedding: 346977  [phash<=8 or cosine>=0.989]
+pixel NCC       | exact dups: min 1.000 | random pairs: max 0.308, 99th pct 0.158, median 0.003
+verified duplicate pairs: 609 (exact 245, near 364)  [NCC>=0.60]
+cross-dataset pairs: 0 | pairs with conflicting grades: 53
+contact sheet: runs/dedup/near_duplicates_aptos_ddr_idrid_messidor.png
+duplicate groups (exact + near): 311, photos involved: 755

@@ -1,0 +1,24 @@
+e2_resnet_v4_448   aptos     seen    kappa 0.874  sens 0.992  spec 0.972
+e2_resnet_v4_448   ddr       UNSEEN  kappa 0.541  sens 0.514  spec 0.972
+e2_resnet_v4_448   idrid     UNSEEN  kappa 0.765  sens 0.912  spec 0.945
+e2_resnet_v4_448   messidor  UNSEEN  kappa 0.531  sens 0.398  spec 0.976
+e3_resnet_v4_448_multi aptos     seen    kappa 0.894  sens 1.000  spec 0.960
+e3_resnet_v4_448_multi ddr       seen    kappa 0.850  sens 0.862  spec 0.945
+e3_resnet_v4_448_multi idrid     UNSEEN  kappa 0.816  sens 0.987  spec 0.727
+e3_resnet_v4_448_multi messidor  UNSEEN  kappa 0.694  sens 0.676  spec 0.916
+
+=== kappa by run and hospital ===
+test set                   aptos     ddr   idrid  messidor
+run                                                       
+c2_convnext_v3_448        0.8738  0.6200  0.7767    0.6065
+c3_convnext_v3_448_multi  0.9061  0.9053  0.8079    0.6670
+e2_resnet_v4_448          0.8736  0.5410  0.7651    0.5312
+e3_resnet_v4_448_multi    0.8938  0.8496  0.8161    0.6941
+r0_oldchain_256           0.8806  0.5282  0.7845    0.4949
+r1_v2_256                 0.9014  0.5727  0.7218    0.4993
+r1b_v2prep_v1aug_256      0.8829  0.5733  0.6759    0.5358
+r2_v2_448                 0.8840  0.6246  0.7512    0.5840
+r3_v2_448_multi           0.8988  0.8795  0.7449    0.6341
+s2_resnet_v3_448          0.9135  0.6315  0.7607    0.6033
+s3_resnet_v3_448_multi    0.8921  0.8640  0.8114    0.6289
+CHAIN4_DONE

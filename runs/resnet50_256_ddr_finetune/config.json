@@ -1,0 +1,32 @@
+{
+  "arch": "resnet50",
+  "img_size": 256,
+  "batch_size": 32,
+  "num_workers": 4,
+  "dropout": 0.3,
+  "label_smoothing": 0.1,
+  "balance": "sampler",
+  "regression": false,
+  "seed": 42,
+  "phase1_epochs": 2,
+  "phase1_lr": 0.0003,
+  "phase2_epochs": 15,
+  "phase2_lr_backbone": 3e-05,
+  "phase2_lr_head": 0.0003,
+  "unfreeze_stages": 3,
+  "weight_decay": 0.0001,
+  "grad_clip": 1.0,
+  "patience": 4,
+  "note": "fine-tuned from resnet50_256 on 1000 DDR images",
+  "device": "mps",
+  "phase1_params": {
+    "trainable": 10245,
+    "frozen": 23508032,
+    "total": 23518277
+  },
+  "phase2_params": {
+    "trainable": 23242757,
+    "frozen": 275520,
+    "total": 23518277
+  }
+}

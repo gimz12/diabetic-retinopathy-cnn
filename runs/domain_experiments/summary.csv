@@ -1,0 +1,7 @@
+model,test set,kappa,accuracy,macro F1,sensitivity,specificity
+shipped (APTOS only),APTOS test,0.8695,0.7724,0.6172,0.9556,0.9812
+shipped (APTOS only),DDR test,0.5903,0.5974,0.3875,0.4846,0.9826
+"A: fine-tuned on 1,000 DDR",APTOS test,0.7742,0.6926,0.4519,0.9839,0.8571
+"A: fine-tuned on 1,000 DDR",DDR test,0.7565,0.747,0.5238,0.8243,0.8672
+B: trained on APTOS + DDR,APTOS test,0.8769,0.7471,0.586,0.9879,0.9624
+B: trained on APTOS + DDR,DDR test,0.8636,0.7987,0.632,0.8956,0.876

@@ -1,0 +1,68 @@
+
+=== 1. tuning comparison (validation kappa during training) ===
+             run    architecture           head  image size  dropout balancing  epochs  minutes  best val kappa
+    resnet50_256        resnet50 classification         256      0.3   sampler      24     40.4          0.9000
+        resnet50        resnet50 classification         224      0.3   sampler      15     21.8          0.8947
+resnet50_ordinal        resnet50     regression         224      0.3   sampler      19     29.1          0.8816
+    effnetb0_256 efficientnet_b0 classification         256      0.3   sampler      28     35.0          0.8813
+  effnetb0_drop5 efficientnet_b0 classification         224      0.5   sampler      23     27.9          0.8671
+effnetb0_sampler efficientnet_b0 classification         224      0.3   sampler      16     18.3          0.8568
+effnetb0_weights efficientnet_b0 classification         224      0.3   weights      14     16.8          0.8134
+
+=== 2. winner: resnet50_256 ===
+
+=== 3. prediction refinements, chosen on validation ===
+test-time augmentation grade cut points cuts  val kappa
+                   off n/a (classifier)          0.9000
+                    on n/a (classifier)          0.9029
+chosen: tta=True, cuts=[0.5, 1.5, 2.5, 3.5]
+
+=== 4. held-out test set, opened once ===
+  accuracy           0.7673
+  macro_f1           0.6256
+  quadratic_kappa    0.8680
+
+                    precision  recall  f1-score  support
+0 No DR                0.9599  0.9705    0.9651    271.0
+1 Mild                 0.4559  0.5536    0.5000     56.0
+2 Moderate             0.7767  0.5333    0.6324    150.0
+3 Severe               0.3256  0.4828    0.3889     29.0
+4 Proliferative DR     0.5484  0.7727    0.6415     44.0
+macro avg              0.6133  0.6626    0.6256    550.0
+weighted avg           0.7922  0.7673    0.7708    550.0
+
+healthy vs any DR:
+  accuracy     0.9655
+  sensitivity  0.9606
+  specificity  0.9705
+  roc_auc      0.9906
+
+=== 5. ship to demo ===
+  runs/best/best.pt <- resnet50_256 with tta=True, cuts=[0.5, 1.5, 2.5, 3.5]
+
+=== 6. external validation ===
+
+DDR: preprocessing 12522 images (cached after the first run)
+Corrupt JPEG data: 35 extraneous bytes before marker 0xd9
+Corrupt JPEG data: 38 extraneous bytes before marker 0xd9
+Corrupt JPEG data: 34 extraneous bytes before marker 0xd9
+                 APTOS test (same hospital network)  DDR, all 12,522 (147 Chinese hospitals)
+accuracy                                     0.7673                                   0.6031
+macro_f1                                     0.6256                                   0.3938
+quadratic_kappa                              0.8680                                   0.5867
+
+DDR per class:
+                    precision  recall  f1-score  support
+0 No DR                0.6534  0.9713    0.7813   6266.0
+1 Mild                 0.0293  0.0333    0.0312    630.0
+2 Moderate             0.8114  0.1682    0.2786   4477.0
+3 Severe               0.2373  0.4153    0.3020    236.0
+4 Proliferative DR     0.5165  0.6506    0.5759    913.0
+macro avg              0.4496  0.4477    0.3938  12522.0
+weighted avg           0.6607  0.6031    0.5398  12522.0
+
+DDR healthy vs any DR:
+  accuracy     0.7278   (APTOS test 0.9655)
+  sensitivity  0.4840   (APTOS test 0.9606)
+  specificity  0.9713   (APTOS test 0.9705)
+  roc_auc      0.8615   (APTOS test 0.9906)

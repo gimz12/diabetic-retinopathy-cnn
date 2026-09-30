@@ -1,0 +1,3 @@
+test-time augmentation,grade cut points,cuts,val kappa
+off,n/a (classifier),,0.9
+on,n/a (classifier),,0.9029

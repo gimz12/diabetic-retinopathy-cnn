@@ -1,0 +1,8 @@
+run,architecture,head,image size,dropout,balancing,epochs,minutes,best val kappa
+resnet50_256,resnet50,classification,256,0.3,sampler,24,40.4,0.9
+resnet50,resnet50,classification,224,0.3,sampler,15,21.8,0.8947
+resnet50_ordinal,resnet50,regression,224,0.3,sampler,19,29.1,0.8816
+effnetb0_256,efficientnet_b0,classification,256,0.3,sampler,28,35.0,0.8813
+effnetb0_drop5,efficientnet_b0,classification,224,0.5,sampler,23,27.9,0.8671
+effnetb0_sampler,efficientnet_b0,classification,224,0.3,sampler,16,18.3,0.8568
+effnetb0_weights,efficientnet_b0,classification,224,0.3,weights,14,16.8,0.8134

@@ -1,0 +1,34 @@
+predicting 12522 DDR images with tta=True (about 10 min)
+12522 DDR images, shipped kappa 0.5867
+
+=== held-out DDR, mean over 5 random local samples (std in brackets) ===
+
+100 local photos:
+  kappa        shipped 0.587  ->  recalibrated 0.693 (0.008)
+  sensitivity  shipped 0.485  ->  recalibrated 0.908 (0.015)
+  specificity  shipped 0.971  ->  recalibrated 0.481 (0.050)
+
+250 local photos:
+  kappa        shipped 0.587  ->  recalibrated 0.698 (0.008)
+  sensitivity  shipped 0.484  ->  recalibrated 0.905 (0.018)
+  specificity  shipped 0.971  ->  recalibrated 0.492 (0.059)
+
+500 local photos:
+  kappa        shipped 0.587  ->  recalibrated 0.704 (0.005)
+  sensitivity  shipped 0.485  ->  recalibrated 0.907 (0.016)
+  specificity  shipped 0.971  ->  recalibrated 0.486 (0.056)
+
+1000 local photos:
+  kappa        shipped 0.587  ->  recalibrated 0.707 (0.004)
+  sensitivity  shipped 0.485  ->  recalibrated 0.905 (0.016)
+  specificity  shipped 0.972  ->  recalibrated 0.493 (0.048)
+
+=== per-grade recall, 500 local photos ===
+                    recall as shipped  recall recalibrated
+0 No DR                        0.9717               0.7680
+1 Mild                         0.0331               0.2678
+2 Moderate                     0.1701               0.3532
+3 Severe                       0.4229               0.2070
+4 Proliferative DR             0.6473               0.5811
+
+saved to runs/local_calibration/

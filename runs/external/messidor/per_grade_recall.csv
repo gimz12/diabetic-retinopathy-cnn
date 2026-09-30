@@ -1,0 +1,6 @@
+,APTOS only,"A: fine-tuned on 1,000 DDR",B: APTOS + DDR
+0 No DR,0.938,0.668,0.493
+1 Mild,0.037,0.0,0.293
+2 Moderate,0.081,0.772,0.599
+3 Severe,0.267,0.347,0.187
+4 Proliferative DR,0.429,0.086,0.171

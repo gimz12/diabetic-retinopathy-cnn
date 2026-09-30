@@ -1,0 +1,5 @@
+test-time augmentation,grade cut points,cuts,val kappa
+off,default,"[0.5, 1.5, 2.5, 3.5]",0.8816
+off,tuned on val,"[0.68, 1.46, 2.88, 3.56]",0.8988
+on,default,"[0.5, 1.5, 2.5, 3.5]",0.8886
+on,tuned on val,"[0.56, 1.5, 2.52, 3.6]",0.8933

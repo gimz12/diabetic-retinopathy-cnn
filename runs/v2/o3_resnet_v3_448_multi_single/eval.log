@@ -1,0 +1,21 @@
+o3_resnet_v3_448_multi_single: tuned cuts [0.82, 1.28, 2.56, 3.24]
+o3_resnet_v3_448_multi_single aptos     seen    kappa 0.902  sens 1.000  spec 0.944
+o3_resnet_v3_448_multi_single ddr       seen    kappa 0.856  sens 0.892  spec 0.891
+o3_resnet_v3_448_multi_single idrid     UNSEEN  kappa 0.801  sens 0.994  spec 0.703
+o3_resnet_v3_448_multi_single messidor  UNSEEN  kappa 0.632  sens 0.733  spec 0.734
+
+=== kappa by run and hospital ===
+test set                        aptos     ddr   idrid  messidor
+run                                                            
+c2_convnext_v3_448             0.8738  0.6200  0.7767    0.6065
+c3_convnext_v3_448_multi       0.9061  0.9053  0.8079    0.6670
+e2_resnet_v4_448               0.8736  0.5410  0.7651    0.5312
+e3_resnet_v4_448_multi         0.8938  0.8496  0.8161    0.6941
+o3_resnet_v3_448_multi_single  0.9015  0.8558  0.8006    0.6315
+r0_oldchain_256                0.8806  0.5282  0.7845    0.4949
+r1_v2_256                      0.9014  0.5727  0.7218    0.4993
+r1b_v2prep_v1aug_256           0.8829  0.5733  0.6759    0.5358
+r2_v2_448                      0.8840  0.6246  0.7512    0.5840
+r3_v2_448_multi                0.8988  0.8795  0.7449    0.6341
+s2_resnet_v3_448               0.9135  0.6315  0.7607    0.6033
+s3_resnet_v3_448_multi         0.8921  0.8640  0.8114    0.6289

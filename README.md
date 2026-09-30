@@ -5,6 +5,8 @@ retinopathy using a convolutional neural network with transfer learning.
 
 Computer Vision coursework 1, BSc (Hons) Computer Science, NIBM.
 
+**Live demo:** https://huggingface.co/spaces/gimz12/dr-screening
+
 | Grade | Stage |
 |---|---|
 | 0 | No diabetic retinopathy |
@@ -58,8 +60,12 @@ of cameras.
 
 Checkpoints are not stored in git (each is about 95 MB). The final model,
 `runs/best/best.pt` (ResNet50, pipeline v3, 448 px, trained on cleaned APTOS + DDR),
-is attached to this repository's **Releases** page. Download it and place it at
-`runs/best/best.pt`, then start the demo:
+is hosted with the live demo. Download it into place, then start the demo:
+
+```bash
+curl -L -o runs/best/best.pt https://huggingface.co/spaces/gimz12/dr-screening/resolve/main/runs/best/best.pt
+```
+
 
 ```bash
 .venv/bin/python app.py            # opens http://127.0.0.1:7860

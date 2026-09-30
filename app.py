@@ -8,6 +8,10 @@ import json
 import sys
 from pathlib import Path
 
+try:
+    import spaces  # Hugging Face ZeroGPU, only installed there
+except ImportError:
+    spaces = None
 import cv2
 import gradio as gr
 import numpy as np
@@ -149,8 +153,8 @@ def result_card(d: dict | None) -> str:
 def load(checkpoint: str | Path):
     """Load the checkpoint once at startup."""
     device = get_device()
-    model, cfg = load_checkpoint(checkpoint, device)
-    return model, cfg, device, eval_tfms(cfg.get("img_size", 224))
+    model, cfg = load_checkpoint(checkpoint, "cpu")
+    return model.to(device), cfg, device, eval_tfms(cfg.get("img_size", 224))
 
 
 def build_predict_fn(model, device, tfms, thresholds=DEFAULT_THRESHOLDS, tta: bool = True,
@@ -316,6 +320,8 @@ def main() -> None:
     model, cfg, device, tfms = load(args.checkpoint)
     analyse = build_predict_fn(model, device, tfms, cfg.get("thresholds", DEFAULT_THRESHOLDS),
                                cfg.get("tta", True), cfg.get("pipeline", "v1"))
+    if spaces:
+        analyse = spaces.GPU(analyse)  # borrow a GPU per photo
     print(f"loaded {cfg['arch']} (pipeline {cfg.get('pipeline', 'v1')}, {cfg.get('img_size', 224)} px) "
           f"on {device}, tta={cfg.get('tta', True)}")
     build_ui(analyse, cfg).launch(share=args.share, theme=gr.themes.Soft(), css=CSS)

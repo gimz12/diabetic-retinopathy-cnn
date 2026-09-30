@@ -1,0 +1,5 @@
+hospital,photos,accuracy,macro F1,quadratic kappa,sensitivity (any DR),specificity (any DR),ROC-AUC (any DR)
+"APTOS (India, home)",504,0.8155,0.6881,0.8921,1.0,0.952,0.9932
+DDR (China),1855,0.8394,0.6883,0.864,0.891,0.9336,0.9677
+"IDRiD (India, other hospital, unseen)",446,0.5942,0.5295,0.8114,0.9937,0.625,0.9457
+"Messidor-2 (France, unseen)",1729,0.6403,0.472,0.6289,0.7304,0.8085,0.8399

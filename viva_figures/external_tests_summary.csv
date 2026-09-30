@@ -1,0 +1,7 @@
+model,dataset,n,accuracy,macro_f1,quadratic_kappa,sensitivity,specificity,roc_auc
+APTOS only,idrid,455,0.5626,0.5167,0.8039,0.9509,0.7519,0.9429
+"A: fine-tuned on 1,000 DDR",idrid,455,0.4857,0.395,0.5862,0.9877,0.3488,0.9412
+B: APTOS + DDR,idrid,455,0.4747,0.4674,0.7559,1.0,0.2636,0.7896
+APTOS only,messidor,1744,0.5889,0.3371,0.4899,0.3576,0.9381,0.7115
+"A: fine-tuned on 1,000 DDR",messidor,1744,0.5596,0.3495,0.4333,0.6671,0.6676,0.7341
+B: APTOS + DDR,messidor,1744,0.4633,0.3632,0.4598,0.7442,0.4926,0.7221

@@ -1,0 +1,19 @@
+# environment & caches
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+~$*
+
+# datasets: download from Kaggle, see README (never committed)
+/Images/
+/DDR/
+/Messidor/
+/idrid/
+/data/processed/
+/data/raw/*/all_images/
+
+# model checkpoints: too large for git; the final model is a GitHub Release asset (see README)
+*.pt
+*.pth
